@@ -1,11 +1,27 @@
-:target:before {
+
+.contenedor ul {
+	margin-top:0.5em;
+list-style-type: square;
+list-style-image: url("");
+list-style-position: inside;
+margin-bottom:1.4em;
+}
+
+.contenedor li {padding: 0px;
+margin: 0px;
+margin-bottom:0.3em;}
+
+/*:target:before {
   content:"";
   display:block;
   height:40px; /* fixed header height*/
   margin:-40px 0 0; /* negative fixed header height */
 }
+*/
+.topbarx{
+}
 
-ul {
+.topbarx ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -14,13 +30,17 @@ ul {
     position: fixed;
     top: 0;
     width: 100%;
+	
+
+	
+	
 }
 
-li {
+.topbarx li {
     float: left;
 }
 
-li a {
+.topbarx a  {
     display: block;
     color: white;
     text-align: center;
@@ -28,7 +48,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
+.topbarx li a:hover:not(.active) {
     background-color: #111;
 }
 
@@ -37,13 +57,10 @@ li a:hover:not(.active) {
 	
 }
 
-/* CSS by GenerateCSS.com */
-/*ul {list-style-type: square;
-list-style-image: url("");
-list-style-position: inside;}
-
-li {padding: 0px;
-margin: 0px;}*/
+#active2 {
+    background-color:#993
+	
+}
 
 .titulo1{
 	text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.75);
@@ -73,6 +90,7 @@ margin: 0px;}*/
   margin-top: 0em;
   margin-bottom: 2em;
   margin-left: 2em;
+  margin-right: 2em;
 }
 
 #introduccion {
@@ -131,6 +149,14 @@ margin: 0px;}*/
 Primary style
 
 -------------------------------- */
+p{
+	line-height:20px;
+	text-align:justify;	
+}
+
+pre{
+}
+
 html * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -163,6 +189,13 @@ h1, h2 {
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
 }
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
 
 /* -------------------------------- 
 

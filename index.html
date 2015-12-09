@@ -12,13 +12,34 @@
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
   	<script src="http://s.imgur.com/min/embed.js" charset="utf-8"></script>
 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$('a[href*=#]').bind('click', function(e) {
+		var target = $(this).attr("href");	
+		var position = $('a[name*='+target.replace('#','')+']').offset().top;
+		if(position!=0){
+			//prevent the "normal" behaviour which would be a "hard" jump
+			e.preventDefault();
+			// perform animated scrolling by getting top-position of target-element and set it as scroll target
+			$('html, body').animate({ scrollTop: position -40 }, 500, function() {
+				location.hash = (target);  //attach the hash (#jumptarget) to the pageurl
+			});
+			return false;
+		}
+	});
+});
+
+</script>
+
 	<title >musicbot</title>
 </head>
 
 <body>
 	
     
-    <a name="Intro"></a> 
+    <a name="Inicio"></a> 
 
     
 	<header>
@@ -28,27 +49,40 @@
 
 	</header>
     
-    <ul style="z-index: 10;">
-  <li><a class="active" href="#Intro">musicBOT</a></li>
+<div class="topbarx" >
+<ul  style="z-index: 10;">
+  <li><a class="active" href="#Inicio">musicBOT</a></li>
   <li><a href="#Intro">Intro</a></li>
   <li><a class="offsetx" href="#Funcionamiento">Funcionamiento</a></li>
   <li><a href="#Proyecto">Proyecto</a></li>
   <li><a href="#Videos">Vídeos</a></li>
   <li><a href="#Galeria">Galería</a></li>
   <li><a href="#Timeline">Timeline</a></li>
+  
+  <li style="float:right;" ><a id="active2" href="#Tweet">Envía un Tweet</a></li>
+
+  
+  
 </ul>
-    
+
+
+</div>
+    <a name="Intro"></a> 
     <section id="introduccion" class="cd-container-2">
     <div class="contenedor">
     <h2 class="titulos">¿Qué es musicBot?</h2>
     
     <p>
-    El robot musicbot es el proyecto final de la asignatura de Sistemas Digitales de Ingeniería de Telecomunicaciones (ETSIB). Para ello hemos partido de la placa Pictor y le hemos añadido funcionalidades. La idea al desarrollar este proyecto era afianzar los conocimientos estudiados a lo largo del cuatrimestre implementándolos en un producto completo. Nuestra idea era hacer un robot educativo, por eso, nos hemos basado en el escornabot, un proyecto de robot educativo abierto para iniciar a los niños y niñas más pequeños en el campo de la robótica y la programación.  
+    El robot musicbot es el proyecto final de la asignatura de Sistemas Digitales de Ingeniería de Telecomunicaciones (ETSIB).
+    Para ello hemos partido de la placa Pictor y le hemos añadido funcionalidades. La idea al desarrollar este proyecto era afianzar los conocimientos estudiados a lo largo del cuatrimestre implementándolos en un producto completo. 
+    	<br><br>
+    Nuestra idea era hacer un robot educativo, por eso, nos hemos basado en el escornabot, un proyecto de robot educativo abierto para iniciar a los niños y niñas más pequeños en el campo de la robótica y la programación.  
+
     </p>
     <p>
     El objetivo de este proyecto es poder programar desde el propio robot una secuencia de movimientos precisos mediante el teclado que incluye, y que a continuación este los ejecute. De esta forma, los más pequeños pueden introducirse en el mundo de la programación y aprender conceptos básicos. Además, se puede visualizar el proceso completo en la pantalla que incluye para poder ver cómo responde ante lo que le programamos.
     </p>
-    <p>
+    <p><br>
     Además de eso, incluye un par de leds RGB y un buzzer que permiten aumentar la opciones y aplicaciones. Los hemos programado para que parpadeen mostrando distintos colores, pero se pueden usar para la finalidad que se desee. La idea era hacer una base sobre la que se pueda construir.
     </p>
     <p>
@@ -67,34 +101,46 @@
     <h2 class="titulos">Funcionamiento</h2>
     
     <p>
-    El robot musicbot tiene dos modos de funcionamiento principales.<br/><br/>
-    </p>
-    <p>
-Modo Manual<br/>
-Desde el teclado se programa la secuencia de movimientos y se va mostrando en el display.<br/>
-A – Avanzar<br/>
-B – Retroceder<br/>
-1-9 – Número de pasos a avanzar retroceder. (Marcar uno después de los comandos avanzar/retroceder)<br/>
-* – Giro hacia la izquierda sobre sí mismo de 90º<br/>
-# – Giro hacia la derecha sobre sí mismo de 90º<br/>
-C – Borrar<br/>
-D – Iniciar secuencia<br/><br/>
-</p>
+    El robot musicbot tiene dos modos de funcionamiento principales:  
+    </p><br>
+    
+    <h1>
+	 Modo Manual
+     </h1>
+
 <p>
-Modo Twitter<br/>
-Hemos desarrollado dos programas, uno en Python, y otro en Java, para poder comunicar la Pictor desde Twitter. De esta forma, le podemos enviar desde la red social la secuencia y ver cómo se ejecuta desde la pictor. Se puede usar cualquier cuenta de twitter, lo único necesario es mencionar a @musicbot2015. El formato de los tweets no es estricto, nuestras propias aplicaciones se encargan de depurar, clasificar y completar la información antes de enviarla por puerto serie. Para ello los comandos son:<br/>
-Go – Avanzar<br/>
-Back – Retroceder<br/>
-Right – Giro hacia la izquierda sobre sí mismo de 90º<br/>
-Left – Giro hacia la derecha sobre sí mismo de 90º<br/>
-1-9 – Número de pasos (Se puede emplear con los 4 comandos de movimiento)<br/>
-Ambas aplicaciones tienen protecciones<br/>
-•	Uso indistinto de mayúsculas o minúsculas.<br/>
-•	Autocompletar en caso de no poner algún número donde se especifique.<br/>
-•	Eliminar toda la información que no esté dentro de los comandos.
+<ul>
+	<li>Desde el teclado se programa la secuencia de movimientos y se va mostrando en el display. </li>
+	<li>A – Avanzar </li>
+	<li>B – Retroceder </li>
+	<li>1-9 – Número de pasos a avanzar retroceder. (Marcar uno después de los comandos avanzar/retroceder) </li>
+	<li>* – Giro hacia la izquierda sobre sí mismo de 90º </li>
+	<li># – Giro hacia la derecha sobre sí mismo de 90º </li>
+	<li>C – Borrar </li>
+	<li>D – Iniciar secuencia</li>
+</ul> 
+</p>
 
+<h2>Modo Twitter</h2>
+<p>
+Hemos desarrollado dos programas, uno en Python, y otro en Java, para poder comunicar la Pictor desde Twitter. De esta forma, le podemos enviar desde la red social la secuencia y ver cómo se ejecuta desde la pictor. Se puede usar cualquier cuenta de twitter, lo único necesario es mencionar a @musicbot2015. El formato de los tweets no es estricto, nuestras propias aplicaciones se encargan de depurar, clasificar y completar la información antes de enviarla por puerto serie. Para ello los comandos son: 
+</p>
+<ul>
+	<li>Go – Avanzar </li>
+	<li>Back – Retroceder </li>
+	<li>Right – Giro hacia la izquierda sobre sí mismo de 90º </li>
+	<li>Left – Giro hacia la derecha sobre sí mismo de 90º </li>
+	<li>1-9 – Número de pasos (Se puede emplear con los 4 comandos de movimiento)</li>
+</ul>
+<p>
+Ambas aplicaciones tienen protecciones 
+</p>
+<ul>
+	<li>Uso indistinto de mayúsculas o minúsculas. </li>
+	<li>Autocompletar en caso de no poner algún número donde se especifique. </li>
+	<li>Eliminar toda la información que no esté dentro de los comandos.</li>
+</ul>
 
-    </p>
     
     </div>
     </section>
@@ -108,16 +154,16 @@ Ambas aplicaciones tienen protecciones<br/>
     <div class="contenedor">
     <h2 class="titulos">Detalles técnicos del proyecto</h2>
     
-    <p>
-    Hardware<br/>
-•	1 Pictor<br/>
-•	1 Teclado<br/>
-•	1 Display LCD<br/>
-•	2 servomotores de rotación continua (ruedas)<br/>
-•	2 leds RGB (faros)<br/>
-•	1 buzzer<br/>
-•	Chasis impreso en 3D (chasis + ruedas)<br/>
-    </p>
+<ul>
+	<li>Hardware </li>
+	<li>1 Pictor </li>
+	<li>1 Teclado </li>
+	<li>1 Display LCD </li>
+	<li>2 servomotores de rotación continua (ruedas) </li>
+	<li>2 leds RGB (faros) </li>
+	<li>1 buzzer </li>
+	<li>Chasis impreso en 3D (chasis + ruedas)</li>
+</ul>
     
     </div>
     </section>
@@ -248,6 +294,32 @@ Ambas aplicaciones tienen protecciones<br/>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 	</section> <!-- cd-timeline -->
+    
+    
+        <a class="offsetx" name="Tweet"></a> 
+
+
+    <section id="introduccion" class="cd-container-2">
+    <div class="contenedor">
+    <h2 class="titulos">Envía un Tweet!</h2>
+        <p>
+    ¡Envía un Tweet combinando las palabras "GO" "BACK" "RIGHT" y "LEFT" y haz que musicbot se mueva por ti!
+        </p><br>
+    <h2> Crea y envía un Tweet </h2>
+    <a href="https://twitter.com/intent/tweet?screen_name=musicbot2015&text=Hola%20musicbot!%20go%202%20right%20left%20go%203%20back%201%20right%20go" class="twitter-mention-button" data-size="large" data-dnt="true">Tweet to @musicbot2015</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<br><br>
+<h2> Últimos Tweets </h2>
+
+
+   <a class="twitter-timeline" height="600" href="https://twitter.com/search?q=to%3Amusicbot2015" data-widget-id="674622114155134976">Tweets sobre to:musicbot2015</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+   
+    </div>
+    </section>
+    
+    
+    
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
 </body>
