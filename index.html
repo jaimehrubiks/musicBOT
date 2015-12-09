@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+  	<script src="http://s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+	<title >musicbot</title>
+</head>
+
+<body>
+	
+    
+    <a name="Intro"></a> 
+
+    
+	<header>
+		<h1 class="titulo1">musicbot</h1>
+        
+
+
+	</header>
+    
+    <ul style="z-index: 10;">
+  <li><a class="active" href="#Intro">musicBOT</a></li>
+  <li><a href="#Intro">Intro</a></li>
+  <li><a class="offsetx" href="#Funcionamiento">Funcionamiento</a></li>
+  <li><a href="#Proyecto">Proyecto</a></li>
+  <li><a href="#Videos">Vídeos</a></li>
+  <li><a href="#Galeria">Galería</a></li>
+  <li><a href="#Timeline">Timeline</a></li>
+</ul>
+    
+    <section id="introduccion" class="cd-container-2">
+    <div class="contenedor">
+    <h2 class="titulos">¿Qué es musicBot?</h2>
+    
+    <p>
+    El robot musicbot es el proyecto final de la asignatura de Sistemas Digitales de Ingeniería de Telecomunicaciones (ETSIB). Para ello hemos partido de la placa Pictor y le hemos añadido funcionalidades. La idea al desarrollar este proyecto era afianzar los conocimientos estudiados a lo largo del cuatrimestre implementándolos en un producto completo. Nuestra idea era hacer un robot educativo, por eso, nos hemos basado en el escornabot, un proyecto de robot educativo abierto para iniciar a los niños y niñas más pequeños en el campo de la robótica y la programación.  
+    </p>
+    <p>
+    El objetivo de este proyecto es poder programar desde el propio robot una secuencia de movimientos precisos mediante el teclado que incluye, y que a continuación este los ejecute. De esta forma, los más pequeños pueden introducirse en el mundo de la programación y aprender conceptos básicos. Además, se puede visualizar el proceso completo en la pantalla que incluye para poder ver cómo responde ante lo que le programamos.
+    </p>
+    <p>
+    Además de eso, incluye un par de leds RGB y un buzzer que permiten aumentar la opciones y aplicaciones. Los hemos programado para que parpadeen mostrando distintos colores, pero se pueden usar para la finalidad que se desee. La idea era hacer una base sobre la que se pueda construir.
+    </p>
+    <p>
+    El chasis completo está diseñado e impreso en 3D y se ha liberado el modelo para que quien quiera pueda descargarlo y fabricar su propio musicbot.
+    </p>
+    </div>
+    </section>
+    
+    
+    
+        <a class="offsetx" name="Funcionamiento"></a> 
+
+    
+    <section id="introduccion" class="cd-container-2">
+    <div class="contenedor">
+    <h2 class="titulos">Funcionamiento</h2>
+    
+    <p>
+    El robot musicbot tiene dos modos de funcionamiento principales.<br/><br/>
+    </p>
+    <p>
+Modo Manual<br/>
+Desde el teclado se programa la secuencia de movimientos y se va mostrando en el display.<br/>
+A – Avanzar<br/>
+B – Retroceder<br/>
+1-9 – Número de pasos a avanzar retroceder. (Marcar uno después de los comandos avanzar/retroceder)<br/>
+* – Giro hacia la izquierda sobre sí mismo de 90º<br/>
+# – Giro hacia la derecha sobre sí mismo de 90º<br/>
+C – Borrar<br/>
+D – Iniciar secuencia<br/><br/>
+</p>
+<p>
+Modo Twitter<br/>
+Hemos desarrollado dos programas, uno en Python, y otro en Java, para poder comunicar la Pictor desde Twitter. De esta forma, le podemos enviar desde la red social la secuencia y ver cómo se ejecuta desde la pictor. Se puede usar cualquier cuenta de twitter, lo único necesario es mencionar a @musicbot2015. El formato de los tweets no es estricto, nuestras propias aplicaciones se encargan de depurar, clasificar y completar la información antes de enviarla por puerto serie. Para ello los comandos son:<br/>
+Go – Avanzar<br/>
+Back – Retroceder<br/>
+Right – Giro hacia la izquierda sobre sí mismo de 90º<br/>
+Left – Giro hacia la derecha sobre sí mismo de 90º<br/>
+1-9 – Número de pasos (Se puede emplear con los 4 comandos de movimiento)<br/>
+Ambas aplicaciones tienen protecciones<br/>
+•	Uso indistinto de mayúsculas o minúsculas.<br/>
+•	Autocompletar en caso de no poner algún número donde se especifique.<br/>
+•	Eliminar toda la información que no esté dentro de los comandos.
+
+
+    </p>
+    
+    </div>
+    </section>
+    
+
+
+    <a class="offsetx" name="Proyecto"></a> 
+
+
+    <section id="introduccion" class="cd-container-2">
+    <div class="contenedor">
+    <h2 class="titulos">Detalles técnicos del proyecto</h2>
+    
+    <p>
+    Hardware<br/>
+•	1 Pictor<br/>
+•	1 Teclado<br/>
+•	1 Display LCD<br/>
+•	2 servomotores de rotación continua (ruedas)<br/>
+•	2 leds RGB (faros)<br/>
+•	1 buzzer<br/>
+•	Chasis impreso en 3D (chasis + ruedas)<br/>
+    </p>
+    
+    </div>
+    </section>
+    
+    
+    <a class="offsetx" name="Videos"></a> 
+
+
+
+    <section id="introduccion" class="cd-container-2">
+    <div class="contenedor">
+    <h2 class="titulos">Vídeos</h2>
+    
+    <p class="vids">
+    <center>
+	<iframe width="560" height="315" style="margin-right:25px; margin-right:25px" src="https://www.youtube.com/embed/5xniR1GN69U" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" style="margin-right:25px; margin-right:2	5px" src="https://www.youtube.com/embed/olit-B5Yldc" frameborder="0" allowfullscreen></iframe>
+    </center>
+    </p>
+    
+    </div>
+    </section>
+
+
+
+    <a class="offsetx" name="Galeria"></a> 
+
+
+    <section id="introduccion" class="cd-container-2">
+    <div class="contenedor">
+    <h2 class="titulos">Galería</h2>
+    
+    <p>
+    Se me ha ocurrido poner una especia de galería extraña como esta con fotos.
+    </p>
+    
+    <iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/YOSOV/embed"></iframe>
+<!--
+	<blockquote class="imgur-embed-pub" lang="en" data-id="a/YOSOV"><a href="//imgur.com/a/YOSOV">newSR</a></blockquote>
+    -->
+    </div>
+    </section>
+
+
+    <a class="offsetx" name="Timeline"></a> 
+
+    
+	<section id="cd-timeline" class="cd-container">
+    
+        <!-- Titulo de sección -->
+    <h1 class="titulos">Timeline</h1>
+    
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/cd-icon-picture.svg" alt="Picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Inicio del Proyecto</h2>
+				<p>Bla bla bla ibamos a hacer un cuadracoptero pero se nos iba de las manos blablacar Foto d eejemplo:.</p>
+                <a target="new" href="https://pbs.twimg.com/media/CVJsRbRW4AAg_bJ.png:large"><img src="https://pbs.twimg.com/media/CVJsRbRW4AAg_bJ.png:large" /></a>
+				<a href="#0" class="cd-read-more">Read more</a>
+				<span class="cd-date">Jan 14</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Title of section 2</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+				<a href="#0" class="cd-read-more">Read more</a>
+				<span class="cd-date">Jan 18</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/cd-icon-picture.svg" alt="Picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Title of section 3</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+				<a href="#0" class="cd-read-more">Read more</a>
+				<span class="cd-date">Jan 24</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location">
+				<img src="img/cd-icon-location.svg" alt="Location">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Title of section 4</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+				<a href="#0" class="cd-read-more">Read more</a>
+				<span class="cd-date">Feb 14</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location">
+				<img src="img/cd-icon-location.svg" alt="Location">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Title of section 5</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
+				<a href="#0" class="cd-read-more">Read more</a>
+				<span class="cd-date">Feb 18</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Final Section</h2>
+				<p>This is the content of the last section</p>
+				<span class="cd-date">Feb 26</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+	</section> <!-- cd-timeline -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>

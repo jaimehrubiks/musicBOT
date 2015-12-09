@@ -1,0 +1,7 @@
+Cosas Por hacer:
+	Poner interlineado más grande y separación entre parrafos
+	Dar formato al texto
+    *Reestructurar bloques, cambiarlos etc?
+    *Completar todo el texto
+    *Cambiar vídeos
+    *Sustituir fondo de arriba por una imagen translúcida?
