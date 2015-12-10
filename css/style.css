@@ -91,6 +91,9 @@ margin-bottom:0.3em;}
   margin-bottom: 2em;
   margin-left: 2em;
   margin-right: 2em;
+  
+    
+
 }
 
 #introduccion {
@@ -99,6 +102,9 @@ margin-bottom:0.3em;}
   margin-top: 1em;
   margin-bottom: 1em;
   background-color:#d5e4ee;
+  
+     -moz-border-radius: 6px; 
+ border-radius: 6px; 
 }
 
 .titulos {
@@ -129,6 +135,7 @@ margin-bottom:0.3em;}
   margin-top: 1em;
   margin-bottom: 2em;
   background-color:#d5e4ee;
+
 }
 
 .cd-container-3 {
