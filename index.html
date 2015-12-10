@@ -23,7 +23,7 @@ $(document).ready(function() {
 			//prevent the "normal" behaviour which would be a "hard" jump
 			e.preventDefault();
 			// perform animated scrolling by getting top-position of target-element and set it as scroll target
-			$('html, body').animate({ scrollTop: position -40 }, 500, function() {
+			$('html, body').animate({ scrollTop: position -60 }, 500, function() {
 				location.hash = (target);  //attach the hash (#jumptarget) to the pageurl
 			});
 			return false;
@@ -59,8 +59,9 @@ $(document).ready(function() {
   <li><a href="#Galeria">Galería</a></li>
   <li><a href="#Timeline">Timeline</a></li>
   
-  <li style="float:right;" ><a id="active2" href="#Tweet">Envía un Tweet</a></li>
 
+  <li style="float:right;" ><a id="active2" href="#Tweet">Envía un Tweet</a></li>
+  <li style="float:right;" ><a href="#Quienes">Quiénes somos</a></li>
   
   
 </ul>
@@ -74,7 +75,7 @@ $(document).ready(function() {
     
     <p>
     El robot musicbot es el proyecto final de la asignatura de Sistemas Digitales de Ingeniería de Telecomunicaciones (ETSIB).
-    Para ello hemos partido de la placa Pictor y le hemos añadido funcionalidades. La idea al desarrollar este proyecto era afianzar los conocimientos estudiados a lo largo del cuatrimestre implementándolos en un producto completo. 
+    Para ello hemos partido de la placa Pictor v2 (plataforma de desarrollo con el microchip PIC16F887) y le hemos añadido funcionalidades. La idea al desarrollar este proyecto era afianzar los conocimientos estudiados a lo largo del cuatrimestre implementándolos en un producto completo. 
     	<br><br>
     Nuestra idea era hacer un robot educativo, por eso, nos hemos basado en el escornabot, un proyecto de robot educativo abierto para iniciar a los niños y niñas más pequeños en el campo de la robótica y la programación.  
 
@@ -154,15 +155,21 @@ Ambas aplicaciones tienen protecciones
     <div class="contenedor">
     <h2 class="titulos">Detalles técnicos del proyecto</h2>
     
+    <h2>Hardware </h2>
 <ul>
-	<li>Hardware </li>
-	<li>1 Pictor </li>
-	<li>1 Teclado </li>
+	<li>1 Pictor [plataforma con un chip PIC]</li>
+	<li>1 Teclado matricial</li>
 	<li>1 Display LCD </li>
 	<li>2 servomotores de rotación continua (ruedas) </li>
 	<li>2 leds RGB (faros) </li>
 	<li>1 buzzer </li>
 	<li>Chasis impreso en 3D (chasis + ruedas)</li>
+</ul>
+<h2>Software</h2>
+<ul>
+<li>Programa en ensamblador con la lógica del musicbot [con MPLAB]</li>
+<li>Programa en Python o en Java para contactar con la API de Twitter</li>
+<li>Hyperterminal o YarHarPictor para enviar el programa a la pictor</li>
 </ul>
     
     </div>
@@ -179,8 +186,8 @@ Ambas aplicaciones tienen protecciones
     
     <p class="vids">
     <center>
-	<iframe width="560" height="315" style="margin-right:25px; margin-right:25px" src="https://www.youtube.com/embed/5xniR1GN69U" frameborder="0" allowfullscreen></iframe>
-    <iframe width="560" height="315" style="margin-right:25px; margin-right:2	5px" src="https://www.youtube.com/embed/olit-B5Yldc" frameborder="0" allowfullscreen></iframe>
+	<iframe width="560" height="315" style="margin-right:25px; margin-right:25px" src="https://www.youtube.com/embed/qFeUJQfq3xs" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" style="margin-right:25px; margin-right:25px" src="https://www.youtube.com/embed/0mZOD8lCvXs" frameborder="0" allowfullscreen></iframe>
     </center>
     </p>
     
@@ -195,15 +202,12 @@ Ambas aplicaciones tienen protecciones
     <section id="introduccion" class="cd-container-2">
     <div class="contenedor">
     <h2 class="titulos">Galería</h2>
-    
-    <p>
-    Se me ha ocurrido poner una especia de galería extraña como esta con fotos.
-    </p>
-    
-    <iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/YOSOV/embed"></iframe>
+
+    <iframe class="imgur-album" width="100%" height="550" frameborder="0" src="http://imgur.com/a/Jyg55/embed"></iframe>
 <!--
 	<blockquote class="imgur-embed-pub" lang="en" data-id="a/YOSOV"><a href="//imgur.com/a/YOSOV">newSR</a></blockquote>
     -->
+    <!-- <blockquote class="imgur-embed-pub" lang="en" data-id="a/Jyg55"><a href="http://imgur.com/a/Jyg55">View post on imgur.com</a></blockquote><script async src="http://s.imgur.com/min/embed.js" charset="utf-8"></script>-->
     </div>
     </section>
 
@@ -223,9 +227,9 @@ Ambas aplicaciones tienen protecciones
 
 			<div class="cd-timeline-content">
 				<h2>Inicio del Proyecto</h2>
-				<p>Bla bla bla ibamos a hacer un cuadracoptero pero se nos iba de las manos blablacar Foto d eejemplo:.</p>
-                <a target="new" href="https://pbs.twimg.com/media/CVJsRbRW4AAg_bJ.png:large"><img src="https://pbs.twimg.com/media/CVJsRbRW4AAg_bJ.png:large" /></a>
-				<a href="#0" class="cd-read-more">Read more</a>
+				<p>Idea inicial de hacer un robot educativo. Pensamos un nombre que realmente no lo identifica.</p>
+                <!--<a target="new" href="https://pbs.twimg.com/media/CVJsRbRW4AAg_bJ.png:large"><img src="https://pbs.twimg.com/media/CVJsRbRW4AAg_bJ.png:large" /></a>
+				<a href="#0" class="cd-read-more">Read more</a>-->
 				<span class="cd-date">Jan 14</span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
@@ -236,8 +240,9 @@ Ambas aplicaciones tienen protecciones
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<h2>Title of section 2</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+				<h2>El primer prototipo</h2>
+				<p>Primer prototipo del chásis con mucha cinta de carrocero </p>
+                <img src="http://i.imgur.com/15jvqWQ.jpg" />
 				<a href="#0" class="cd-read-more">Read more</a>
 				<span class="cd-date">Jan 18</span>
 			</div> <!-- cd-timeline-content -->
@@ -249,9 +254,10 @@ Ambas aplicaciones tienen protecciones
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<h2>Title of section 3</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
-				<a href="#0" class="cd-read-more">Read more</a>
+				<h2>El segundo prototipo</h2>
+				<p>Segundo prototipo usando un router como chasis</p>
+                <img src="http://i.imgur.com/Abzqm1b.jpg" />
+                
 				<span class="cd-date">Jan 24</span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
@@ -262,9 +268,10 @@ Ambas aplicaciones tienen protecciones
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<h2>Title of section 4</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-				<a href="#0" class="cd-read-more">Read more</a>
+				<h2>Impresión en 3D</h2>
+				<p>Diseñamos un chasis en 3D y lo imprimimos en 3D
+</p>
+				<a href="http://www.thingiverse.com/thing:1188478" class="cd-read-more">Ver el deiseño en Thingiverse</a>
 				<span class="cd-date">Feb 14</span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
@@ -275,9 +282,10 @@ Ambas aplicaciones tienen protecciones
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<h2>Title of section 5</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-				<a href="#0" class="cd-read-more">Read more</a>
+				<h2>Momento de hacerlo público</h2>
+				<p>Lo damos a conocer en twitter</p>
+                <blockquote class="twitter-tweet" lang="es"><p lang="es" dir="ltr">Preparando con <a href="https://twitter.com/jaimehrubiks">@jaimehrubiks</a> <a href="https://twitter.com/hashtag/musicbot?src=hash">#musicbot</a>,un primo feo de <a href="https://twitter.com/escornabot">@escornabot</a> <a href="https://t.co/n6TL3eFAgB">pic.twitter.com/n6TL3eFAgB</a></p>&mdash; Eneko Montero (@EnekoMontero) <a href="https://twitter.com/EnekoMontero/status/668868855960334336">noviembre 23, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 				<span class="cd-date">Feb 18</span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
@@ -288,11 +296,36 @@ Ambas aplicaciones tienen protecciones
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<h2>Final Section</h2>
-				<p>This is the content of the last section</p>
+				<h2>Hay interés por el proyecto</h2>
+				<p>A escornabot (robot en el que nos hemos basado) le gusta y nos pide más información </p>
+                <blockquote class="twitter-tweet" lang="es"><p lang="es" dir="ltr"><a href="https://twitter.com/EnekoMontero">@EnekoMontero</a> <a href="https://twitter.com/jaimehrubiks">@jaimehrubiks</a> Ei! mola! no nos lo vas a presentar por la lista de correo? Queremos saber más de el! :D&#10;<a href="https://t.co/DwSuQMugb0">https://t.co/DwSuQMugb0</a></p>&mdash; escornabot (@escornabot) <a href="https://twitter.com/escornabot/status/671449963235319808">noviembre 30, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 				<span class="cd-date">Feb 26</span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
+        
+        
+        
+        
+        
+        <div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/cd-icon-picture.svg" alt="Picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Inicio del Proyecto</h2>
+				<p>Idea inicial de hacer un robot educativo. Pensamos un nombre que realmente no lo identifica.</p>
+                <!--<a target="new" href="https://pbs.twimg.com/media/CVJsRbRW4AAg_bJ.png:large"><img src="https://pbs.twimg.com/media/CVJsRbRW4AAg_bJ.png:large" /></a>
+				<a href="#0" class="cd-read-more">Read more</a>-->
+				<span class="cd-date">Jan 14</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+        
+        
+        
+        
+        
 	</section> <!-- cd-timeline -->
     
     
@@ -312,11 +345,63 @@ Ambas aplicaciones tienen protecciones
 <h2> Últimos Tweets </h2>
 
 
-   <a class="twitter-timeline" height="600" href="https://twitter.com/search?q=to%3Amusicbot2015" data-widget-id="674622114155134976">Tweets sobre to:musicbot2015</a>
+   <a class="twitter-timeline" height="600" href="https://twitter.com/search?q=musicbot2015" data-widget-id="674622114155134976">Tweets sobre to:musicbot2015</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
    
     </div>
     </section>
+    
+    
+    
+    
+            <a class="offsetx" name="Quienes"></a> 
+
+
+    <section id="introduccion" class="cd-container-2">
+    <div class="contenedor">
+    <h2 class="titulos">¿Quienes Somos?</h2>
+        <p>
+    Somos estudiantes de Ingeniería de Telecomunicaciones blabla no sé que queda mejor si en columna o en serie
+        </p><br>
+    
+    <p>
+    <h2 style="font-size:19px">Eneko Montero</h2>
+    Estudiante en la UPV/EHU [Ingeniería de Telecomunicaciones]
+    <h2 style=" font-size:16px; padding-top:0.3em; ">Twitter:<a href="http://twitter.com/jaimehrubiks">@EnekoMontero</a></h2>       
+    <h2 style=" font-size:16px; ">Email: <a href="http://twitter.com/jaimehrubiks">eneko.montero@gmail.com </a></h2>
+    
+    <h2 style=" padding-top:0.8em;font-size:19px">Jaime Hidalgo</h2>
+    Estudiante en la UPV/EHU [Ingeniería de Telecomunicaciones]
+    <h2 style=" font-size:16px; padding-top:0.45em; ">Twitter: <a href="http://twitter.com/jaimehrubiks">@jaimehrubiks</a></h2>  
+    <h2 style=" font-size:16px; ">Email: <a href="http://twitter.com/jaimehrubiks">Jaimehidalgo2@gmail.com</a></h2>       
+     
+                
+    </p>        
+            
+            
+    <div style=" padding-top:1em; width:auto;">
+    <center>
+    <div style="float:left;width:50%;text-align:left">
+    <p>
+     
+     </p>
+    </div>
+
+	<div style="float:right;width:50%;text-align:left">
+    <p>
+     
+     </p>
+    </div>
+
+    </center>
+    </div>
+    
+    
+   
+    </div>
+    </section>
+    
+    
     
     
     
